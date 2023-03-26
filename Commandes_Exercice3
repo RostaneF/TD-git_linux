@@ -1,0 +1,10 @@
+Pour cet exo j'ai executé la commande : .env/bin/pip3 install requests (pour installer le module requests sur mon environnement virtuel
+
+1/ touch/nano exo3.py
+2/ .env/bin/python3 exo3.py
+3/ 
+On execute python sur l'environnement virtuel : 
+.env/bin/python3
+On importe le fichier généré : import exo3
+On execute la fonction : exo3.get_manor_ids("1036") 'Rq: j'aurais pu aussi utiliser une fstring dans la req qui utilise l'url
+On quitte : exit()
