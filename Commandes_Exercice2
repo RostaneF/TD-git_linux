@@ -1,0 +1,4 @@
+1/ pip3 install requests
+2/ touch exo2.py; nano exo2.py
+3/ see content of exo2.py
+4/ git add .; git commit -m "commit code"
