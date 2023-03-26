@@ -1,0 +1,15 @@
+1/ mkdir [/path/to/loc] (j'ai choisis une structure un peu différente pour avec chaque exo dans un directory)
+cd [path/to/loc]
+2/ git init (initialisation du git)
+3/ sudo apt-get install python3-pip
+4/ pip3 install VirtualEnv
+5/ virtualenv .env
+6/ source .env/bin/activate (On observe que maintenant, (.env) est écrit dans au début dans le prompt
+7/ pip3 list
+8/ git status ( On ne voit pas de fichier en attente de track ni de fichier à commit, c'est normal) les seules modifs sont un fichier .git initialisé et un fichier .env
+9/ echo ".env" >> .gitignore
+10/ git status (cette fois ci on constate un changement, modifier le .gitignore est la façon propre de procéder)
+11/
+git add .gitignore
+git commit -m "Modification : Ajout d'un .gitignore"
+git status; git log --oneline
