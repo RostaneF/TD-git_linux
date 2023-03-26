@@ -1,0 +1,64 @@
+Voici les commandes importantes à connaitre pour le TD1:
+
+*Première commande la plus importante : 
+man pour afficher le manuel sur une commande spécifique: man [commande]
+[commande] --help pour afficher l'aide et l'information sur la commande 
+
+*Pour se deplacer dans les fichiers, On utilise le command directory cd, voici les utilisations:
+
+Se rendre à la racine : cd / 
+Se rendre dans un directory spécifié : : cd [nom_directory]
+Se rendre au home : cd /home
+Se rendre au home utilisateur : cd /home/rostane  ou  cd ~ (c'est dans cette location qu'on travaille)
+Se rendre au directory précédent : cd .. 
+
+*Pour afficher le contenu de la location dans laquelle on se trouve on utilise ls : 
+
+Afficher les fichiers dans la location ou on est : ls
+Afficher les fichiers d'un directory spécifique : ls [path]
+Afficher les permissions d'un fichier : ls -l [nom_fichier] 
+Afficher tous les fichiers (même les privés et cachés) : ls -a (pour -all)
+
+*Pour afficher le path : pwd
+
+*Pour créer des fichiers: 
+
+Créer un directory : mkdir [nom_directory]
+Pour créer un fichier (peu importe le type) : touch [nom_fichier.type_fichier]
+
+*Pour déplacer ou rename un fichier :
+Pour le déplacer : mv [nom_fichier à déplacer] [nom_directory où on veut le déplacer]
+Pour le rename : mv [nom_fichier à rename] [nouveau nom]
+
+*Pour créer une copie d'un fichier un fichier ou un directory : cp 
+Pour un fichier : cp [nom_fichier ou path]
+Pour un directory : cp -r [nom_fichier ou path]
+
+*Pour supprimer un fichier : rm 
+Pour un fichier : rm [nom_fichier ou path]
+Pour un directory : rm -r [nom_fichier ou path]
+
+*** Remarque : le -r correspond à -recursive (pour indiquer la suppression de manière reccursive du dossier et de ses contentants
+on peut aussi utiliser -v -verbose qui spéficie l'opperation qui vient d'être effectuée
+
+*Pour affichier : echo (equivalent du print)
+exemple d'utilisation : echo "chaine de caractères"
+
+*Pour afficher le contenu d'un fichier : cat
+exemple d'utilisation : cat [nom_fichier]
+
+*Pour modifier les permissions d'un fichier : chmod
+Utilisation : chmod [permissions] [nom_fichier]
+les permissions sont :r,w,x respectivement pour read,write,execute que l'on attribue à u=...,g=...,o=... respectivement pour utilisateur, groupe, other
+
+*Pour changer le possesseur du fichier : chown
+Utilisation : chown [nom_nouveau_possesseur] [nom_fichier]
+si on a pas les droits, rajouter sudo au début
+
+*Pour installer des modules/packages : apt 
+
+à chaque fois au début on fait : 
+sudo apt update
+sudo apt upgrade
+
+Utilisation : sudo apt install [nom_package]

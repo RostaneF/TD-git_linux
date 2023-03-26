@@ -1,0 +1,65 @@
+Voici ce qu'il faut connaître sur le TD de git : 
+
+*Pour vérifier la version de git : git --version
+
+*Pour configurer le nom et l'émail : git config --global user.name (resp : user.email) "name" (resp : e-mail)
+
+*Pour lister les informations : git config -l (ou --list) pour lister les informations.
+
+-------------------------------------------------------------------------------------------------
+
+*Pour créer un git repo : git init
+
+*Pour vérifier que git a correctement initialisé le repo : ls -a (pour afficher même les messages privés)
+
+*Pour afficher le statut du git : git status
+
+*Pour créer le fichier rmd : echo "#Test repository" > readme.md
+
+*Pour "Stage a file" : git add readme.md (Cette commande sert à ajouter des modifications à la "zone de staging"
+qui correspond à l'espace de préparation où on selectionne les modifications qu'on veut ajouter au prochain commit.
+Autre syntaxe pour commit tous les changements : git add . (le point indique qu'il faut ajouter tous les changements"
+
+
+*Pour commit le fichier : git commit -m "Message" (commit les modifications avec le message associé).
+
+*Pour afficher les logs : git log 
+On peut aussi afficher chaque changement sur une ligne de manière plus propre : git log --oneline
+Une autre utilisation est également possible : git log --graph
+Cela affiche : le commit hash/l'auteur du commit/date&temps/commit msg.
+
+*Pour afficher les différences entre deux commits : git diff HEAD^ 
+(HEAD est l'instance courrante et ^indique une comparaison avec la précédente) 
+On peut aussi observer les differences avec une version plus anterieure en ajoutant des ^
+Ou en utilisant la syntaxe : HEAD~[nombre d'incréments de recul]
+Ou en spécifiant le Hash de la version avec laquelle on veut vérifier les différences : git diff HEAD^ [Hash de la version concernée]
+
+*Pour restaurer une version antérieure du repo : git checkout [Hash de la version concernée]
+
+-----------------------------------------------------------------------------------------------------------
+
+git revert : Pour inverser un commit (revenir à une version anterieure) 
+
+git reset : pour supprimer les changmenents (il existe 3 degrés de reset allant de soft à hard)
+
+-------------------------------------------------------------------------
+*Pour créer des alias : git config global.alias[alias qu'on veut créer] [commande à laquelle on associe l'alias]
+
+exemple : git config --global alias.s status
+
+-------------------------------------------------------------------------------------------------------
+
+**\ La partie qui suit porte sur l'interaction entre l'index local (git) et github 
+
+Voici quelques-unes des commandes principales à connaître pour l'interaction entre Git, Linux et GitHub :
+
+git clone: pour cloner un dépôt distant sur votre machine locale
+git add: pour ajouter des modifications à l'index
+git commit: pour enregistrer les modifications dans l'historique de Git
+git push: pour pousser les modifications enregistrées localement vers un dépôt distant (comme GitHub)
+git pull: pour récupérer les modifications d'un dépôt distant et les fusionner avec votre copie locale
+git branch: pour créer, supprimer et gérer des branches
+git merge: pour fusionner des modifications de différentes branches
+git rebase: pour appliquer des modifications d'une branche à une autre
+git log: pour afficher l'historique des commits
+git remote: pour gérer les connexions avec les dépôts distants (comme GitHub)
